@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más allá del silencio</title>
+    <link rel="icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #e63946;
+            --background-color: #f9f9f9;
+            --light-color: #ffffff;
+            --accent-color: #2c2c2c;
+            --heading-color: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+            header h1 {
+                font-size: 2.8rem;
+                margin-bottom: 0.5rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+                color: #ccc;
+            }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+        }
+
+        .logo {
+            width: 10%;
+            height: 10%;
+            flex-shrink: 0;
+        }
+
+        nav {
+            background: var(--accent-color);
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+            nav a {
+                color: var(--light-color);
+                text-decoration: none;
+                font-weight: bold;
+                padding: 0.3rem 0.6rem;
+                border-radius: 4px;
+                transition: background 0.3s, color 0.3s;
+            }
+
+                nav a:hover {
+                    background: var(--secondary-color);
+                    color: white;
+                }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('header.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+            padding: 1rem;
+            text-align: center;
+        }
+
+            .hero h2 {
+                font-size: 2.5rem;
+                max-width: 850px;
+            }
+
+        .content {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+            .content h3 {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+                color: var(--heading-color);
+            }
+
+            .content h4 {
+                font-size: 1.4rem;
+                margin-top: 1.5rem;
+                color: var(--secondary-color);
+            }
+
+            .content p, .content ul li {
+                margin-bottom: 1rem;
+                font-size: 1.05rem;
+            }
+
+            .content ul {
+                list-style: disc inside;
+            }
+
+        .stats {
+            background: #fefefe;
+            position: relative;
+            left: 240px;
+            padding: 2rem;
+            border-left: 6px solid var(--secondary-color);
+            margin: 3rem 0;
+            border-radius: 8px;
+        }
+
+        .donate-section {
+            background: var(--secondary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 5rem 2rem;
+            border-top: 4px solid #c72d3b;
+        }
+
+            .donate-section h3 {
+                margin-bottom: 1rem;
+                font-size: 2.2rem;
+            }
+
+            .donate-section p {
+                margin-bottom: 2rem;
+                font-size: 1.1rem;
+            }
+
+            .donate-section button {
+                background: var(--light-color);
+                color: var(--secondary-color);
+                padding: 0.8rem 2.2rem;
+                border: none;
+                font-size: 1.1rem;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background 0.3s;
+            }
+
+                .donate-section button:hover {
+                    background: #f1f1f1;
+                }
+
+        footer {
+            background: var(--primary-color);
+            color: #ccc;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .content {
+                padding: 2rem 1.2rem;
+            }
+
+            .donate-section h3 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo ONG" class="logo">
+            <div>
+                <h1>Más allá del silencio</h1>
+                <p>Ayudamos a las víctimas de los cárteles</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#cartelli">El problema</a>
+        <a href="#missione">Misión</a>
+        <a href="#obiettivo">Obietivos</a>
+        <a href="#storie">Testimonios</a>
+        <a href="#statistiche">Estadísticas</a>
+        <a href="#aiuto">Donar</a>
+        <a href="#contatti">Contacto</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Devolver dignidad, seguridad y futuro a quienes lo han perdido todo</h2>
+    </section>
+
+    <section class="content" id="cartelli">
+        <h3>El problema de los carteles</h3>
+        <p>
+            Al final del siglo XIX, el uso de opiáceos y marihuana con fines medicinales era común y legal en México. La región de 
+            Sinaloa, gracias a su clima favorable, se convirtió en un centro de cultivo de amapola y cannabis. La llegada de 
+            inmigrantes chinos, que trajeron consigo la costumbre de fumar opio, contribuyó a la difusión de estas prácticas.
+        </p>
+        <p>
+            En la década de 1980, Miguel Ángel Félix Gallardo, un ex policía, fundó el Cártel de Guadalajara, una de las 
+            primeras organizaciones criminales mexicanas en colaborar con los cárteles colombianos para traficar 
+            cocaína a Estados Unidos. Este cártel actuó como intermediario entre los productores sudamericanos y los 
+            mercados norteamericanos.
+        </p>
+        <p>
+            Tras la detención de Félix Gallardo en 1989, el Cártel de Guadalajara se fragmentó en varias organizaciones, entre ellas:
+            <ul>
+                <li>Cártel de Sinaloa: Liderado por Joaquín “El Chapo” Guzmán, se convirtió en uno de los más poderosos, con operaciones alrededor del mundo.</li>
+                <li>Cártel del Golfo: Opera principalmente en la región noreste de México.</li>
+                <li>Cártel de Juárez: Controlaba importantes rutas de tráfico a través de la ciudad de Ciudad Juárez.</li>
+                <li>Los Zetas: Inicialmente el brazo armado del Cártel del Golfo, se independizaron y fueron conocidos por su brutalidad.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="content" id="missione">
+        <h3>Nuestra misión</h3>
+        <p>
+            Mas allá del silencio es una organización no gubernamental con sede en Monza, Italia, comprometida en dar apoyo a las 
+            comunidades indígenas del estado de Chiapas, México, que enfrentan las consecuencias de la violencia generada por los 
+            cárteles de la droga.  
+        </p>
+        <p>
+            Trabajamos con la Cáritas Diocesana de San Cristóbal de Las Casas, una institución con más de 30 años de experiencia 
+            en la región, proporcionando asistencia humanitaria, apoyo psicológico y asesoría legal a las familias desplazadas debido a
+            los conflictos entre el Cártel de Sinaloa y el Cártel Jalisco Nueva Generación.
+        </p>
+    </section>
+
+    <section class="content" id="obiettivo">
+        <h3>Nuestros obietivos</h3>
+        <ul>
+            <li>
+                Establemos alianzas con asociaciones, parroquias y centros comunitarios en Monza y sus alrededores para fortalecer la red de apoyo.
+            </li>
+            <li>
+                Diseñamos y distribuir folletos informativos para concienciar a la comunidad sobre la situación en Chiapas.
+            </li>
+            <li>
+                Formamos un equipo de voluntarios comprometidos que participen activamente en nuestras iniciativas y eventos.
+            </li>
+            <li>
+                Lanzamos una campaña de crowdfunding en línea a través de plataformas como GoFundMe para financiar proyectos y enviar ayuda a Chiapas.
+            </li>
+            <li>
+                Organizamos mercadillos artesanales, cenas y aperitivos benéficos para recaudar fondos y fomentar la participación comunitaria.
+            </li>
+            <li>
+                Creamos y gestionamos perfiles en redes sociales para compartir historias, actualizaciones y promover nuestras actividades.
+            </li>
+            <li>
+                Mantenemos una comunicación constante con la Cáritas Diocesana de San Cristóbal de Las Casas para asegurar que los fondos 
+                y recursos lleguen a quienes más lo necesitan. 
+            </li>
+            <li>
+                Recolectamos ropa y fondos para enviarlos a la Cáritas en Chiapas, apoyando directamente a las familias afectadas.
+            </li>
+        </ul>
+    </section>
+
+    <section class="content" id="storie">
+        <h3>La historia de Daniela</h3>
+        <p>
+            Daniela, una mujer nicaragüense, fue secuestrada y explotada sexualmente por el Cártel del Golfo y Los Zetas en México. Durante su
+            cautiverio, fue obligada a trabajar en bares y casas de seguridad, donde sufrió abusos físicos y psicológicos. Los criminales
+            incluso implantaron un chip en su cuerpo para rastrearla. Logró escapar con la ayuda de una persona que arriesgó su vida para
+            liberarla. Actualmente, reside en México con una visa humanitaria y recibe apoyo psicológico, mientras espera justicia.
+        </p>
+        <h3>La historia de Luís</h3>
+        <p>
+            En 2023 Luis fue secuestrado en el Estado de México por miembros del cártel de La Familia Michoacana mientras salía a comprar
+            cervezas por la noche. Fue llevado a una bodega y posteriormente trasladado a la sierra de Guerrero, donde fue obligado
+            a trabajar en condiciones inhumanas: cargaba suministros para sicarios, recibía escasa alimentación y era vigilado
+            constantemente.
+            El año siguiente durante un ataque armado en Buenavista de los Hurtados, aprovechó la confusión para escapar.
+            Pasó cuatro días perdido en el monte antes de llegar a una comunidad donde se entregó a un grupo de autodefensas.
+        </p>
+        <h3>Las historia de los niños</h3>
+        <p>
+            Organizaciones como Reinserta han documentado casos de menores de edad reclutados por cárteles.
+            Un ejemplo es Matías, que a la edad de 12 años fue cooptado por un grupo criminal y obligado a cometer asesinatos.
+            Estos menores, a menudo provenientes de entornos vulnerables, son utilizados como sicarios o halcones, y enfrentan
+            dificultades para reintegrarse a la sociedad.
+        </p>
+    </section>
+
+    <section class="content stats" id="statistiche">
+        <h3>Actividad de los cárteles</h3>
+        <ul>
+            <li>Más de 30.000 homicidios en 2023 atribuidos al crimen organizado según el Institudo Nacional de Estatistica</li>
+            <li>Unas 80 personas matadas cada día</li>
+            <li>Casi 80.000 secuestros en 2022</li>
+            <li>Más de 100.000 personas desaparecidas según la ONU</li>
+            <li>La mayoría no han sido encontrados</li>
+            <li>Delitos frecuentes: extorsión, violencia sexual, tortura</li>
+        </ul>
+    </section>
+
+    <section class="donate-section" id="aiuto">
+        <h3>Haz la diferencia</h3>
+        <p>Con tu donación ayudas a una familia, financias refugios seguros y brindas terapia a víctimas de traumas.</p>
+        <button>Dona ahora</button>
+    </section>
+
+    <section class="content" id="contatti">
+        <h3>Contáctanos</h3>
+        <p>Email: info@masalladelsilencio.com</p>
+        <p>Síguenos en redes para conocer nuestras acciones.</p>
+        <ul>
+            <li>Instagram: @masalladelsilencio</li>
+            <li>Facebook: facebook.com/masalladelsilencio</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Además del Silencio ONG. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
